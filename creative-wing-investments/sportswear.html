@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sportswear & Team Kits — Creative Wing Investments</title>
+<meta name="description" content="Premium team jersey sets, breathable and bold. Custom team printing available. Cash deals only, USD pricing. Order via WhatsApp.">
+<meta property="og:title" content="Sportswear — Creative Wing Investments">
+<meta property="og:description" content="Premium team jersey sets in Harare. Custom printing available.">
+<meta property="og:image" content="images/sportswear/01.jpeg">
+<link rel="icon" href="images/logo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><img src="images/logo.jpeg" alt=""><span>Creative <b>Wing</b></span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cars.html">Cars</a>
+      <a href="sportswear.html" class="active">Sportswear</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" aria-label="Menu"><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow reveal">Team Kits & Training Sets</span>
+    <h1 class="reveal">Step on the pitch with <span class="shimmer-text">style.</span></h1>
+    <p class="reveal">Breathable polyester jersey + shorts sets in bold colorways. Sizes S–XXL. Custom team printing available on request.</p>
+    <div class="collage reveal-zoom">
+      <img src="images/sportswear/01.jpeg" alt="">
+      <img src="images/sportswear/05.jpeg" alt="">
+      <img src="images/sportswear/09.jpeg" alt="">
+      <img src="images/sportswear/12.jpeg" alt="">
+      <img src="images/sportswear/15.jpeg" alt="">
+      <img src="images/sportswear/17.jpeg" alt="">
+      <img src="images/sportswear/19.jpeg" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:30px">
+  <div class="container">
+    <div class="controls reveal">
+      <input id="search" type="search" placeholder="Search by name or ID...">
+      <select id="sort" aria-label="Sort">
+        <option value="default">Sort: Default</option>
+        <option value="price-asc">Price: low → high</option>
+        <option value="price-desc">Price: high → low</option>
+        <option value="name">Name A–Z</option>
+      </select>
+      <label class="toggle"><input type="checkbox" id="stockOnly"> In stock only</label>
+    </div>
+    <div id="chips" class="chips reveal" style="margin-bottom:24px"></div>
+    <div id="grid" class="grid"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="images/logo.jpeg" alt=""><span>Creative <b>Wing</b></span></a>
+        <p style="margin-top:12px">Quality cars and team sportswear in Harare. Cash deals only.</p>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="cars.html">Cars</a></li><li><a href="sportswear.html">Sportswear</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Reach Us</h4><ul>
+        <li><a href="https://wa.me/263773967500" target="_blank" rel="noopener">WhatsApp +263 77 396 7500</a></li>
+        <li>Harare, Zimbabwe</li><li>Mon–Sat · 8:00–18:00</li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Creative Wing Investments.</span>
+      <span>Cash deals only · USD pricing</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/main.js"></script>
+<script>
+  window.WHATSAPP_NUMBER = WHATSAPP_NUMBER;
+  const cats = [...new Set(SPORTSWEAR.map(s=>s.category))];
+  CWI.setupCatalog({ gridSel:"#grid", items:SPORTSWEAR, type:"sportswear", categories:cats });
+</script>
+</body>
+</html>
